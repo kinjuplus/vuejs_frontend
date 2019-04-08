@@ -1,0 +1,48 @@
+﻿@import url(jqueryui-themes/biz/jquery-ui-1.10.4.custom.css);
+
+h1.ui-state-default, h2.ui-state-default, h3.ui-state-default { font-family: Verdana,Arial,Helvetica,sans-serif; }
+
+.ui-accordion .ui-state-hover,
+.ui-tabs-nav .ui-state-hover,
+.ui-slider-handle.ui-state-hover, .ui-slider-handle.ui-state-focus
+{
+    background: #FFF;
+    color: #666;
+    cursor: pointer;
+}
+.ui-tabs-nav > .ui-state-hover a
+{
+    color: #666;
+}
+.ui-accordion .ui-state-active
+{
+    background: #0073ea url(../styles/jqueryui-themes/biz/images/ui-bg_highlight-soft_50_0073ea_1x100.png) 50% 50% repeat-x;
+    border: 1px solid #0073ea;
+    color: #FFF;
+}
+
+.ui-accordion .ui-state-active .ui-icon { background-image: url(jqueryui-themes/biz/images/ui-icons_fff_256x240.png); }
+.ui-accordion .ui-state-hover .ui-icon { background-image: url(jqueryui-themes/biz/images/ui-icons_666_256x240.png); }
+
+.ui-state-highlight div, .ui-state-error div, .ui-state-highlight p, .ui-state-error p
+{
+    margin: 0.5em;
+}
+
+.ui-datepicker-calendar .ui-state-default { background:#FFF; }
+.ui-datepicker-calendar .ui-state-hover { color: #ff0084; }
+.ui-datepicker-calendar .ui-state-active, a.ui-state-hover { background: #0073ea; color:#fff; }
+
+
+
+/**
+ * 表單
+ */
+.datepicker {
+    background: url(../images/icons/calendar.png) no-repeat right top;
+    font-family: monospace;
+    width: 8em;
+}
+.datepicker:focus {
+    background-image: url(../images/icons/calendar-focus.png);
+}

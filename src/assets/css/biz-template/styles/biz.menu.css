@@ -1,0 +1,175 @@
+﻿/********************************************************** 上方選單 Style Start ***/
+.ui-layout-north ul.menu
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    line-height: 26px;
+    background: url(../images/layout/nav.png) repeat-x 0 0;
+    border-top: solid 1px #808080;
+    border-bottom: solid 1px #808080;
+    border-left: none;
+    border-right: none;
+    padding: 0;
+    font-size: 11px;
+    -webkit-box-shadow: #AAA 0 0 8px;
+    -moz-box-shadow: #AAA 0 0 8px;
+    box-shadow: #AAA 0 0 8px;
+    margin-left: 0px; /* bootstrap */
+    overflow: visible;
+}
+
+.ui-layout-north ul.menu:after {
+    content:'';
+    display:block;
+    clear: both;
+}
+
+.ui-layout-north ul.menu a, .ui-layout-west ul.menu a
+{
+    color: #000;
+    text-decoration: none;
+    line-height: 26px;
+    display: block;
+}
+
+.ui-layout-north ul.menu > li 
+{
+    float: left;
+    padding: 0 1em;
+    border-right: 1px solid #CCC;
+}
+
+.ui-layout-north ul.menu > li:hover
+{
+    background: url(../images/layout/nav_hover.png) repeat-x 0 0;
+}
+
+.ui-layout-north ul.menu > li.has-child-menu > a
+{
+    padding-right: 12px;
+    border: 1px solid #999;
+    background: url(../images/layout/nav_hasChild1.png) no-repeat right 12px;
+}
+
+.ui-layout-north ul.menu .sub-menu { display: none; zoom: 1; }
+.ui-layout-north ul.menu .sub-menu > li { padding: 0 1em; white-space:nowrap; }
+.ui-layout-north ul.menu .sub-menu > li:hover { background: #E8F2FF; }
+
+.ui-layout-north ul.menu .sub-menu
+{
+    position: absolute;
+    border: 1px solid #999;
+    margin-left: -13px;
+    background: #FFF;
+    padding: 3px 0;
+    z-index: 2;
+}
+
+.ui-layout-north ul.menu .sub-menu > li.has-child-menu > a
+{
+    padding-right: 12px;
+    background: url(../images/layout/nav_hasChild2.png) no-repeat right center;
+}
+
+.ui-layout-north ul.menu .sub-menu .sub-menu
+{
+    margin: -26px 0 0 0;
+    left: 100%;
+}
+/********************************************************** 上方選單 Style END ***/
+
+/* 特規: Welcome訊息與登出按鈕 */
+.ui-layout-north ul.menu > li.welcome, .ui-layout-north ul.menu > li.language, .ui-layout-north ul.menu > li.logout
+{
+    float: right;
+}
+
+/* 特規: 登出按鈕 */
+.ui-layout-north ul.menu > li.logout > a
+{
+    background: url(../images/icons/logout.png) no-repeat -2px 6px;
+    padding: 0 0 0 16px;
+}
+
+.ui-layout-north ul.menu > li.logout > a:hover
+{
+    background: url(../images/icons/logout_hover.png) no-repeat -2px 6px;
+}
+
+/********************************************************** 左側選單 Style START ***/
+.ui-layout-west  
+{
+    float: left; 
+	box-sizing: border-box;
+    padding: 1em 20px 0 0;
+    margin-bottom: 2em;
+    background: #FFF url(../images/layout/west.png) repeat-y right top;
+}
+
+.ui-layout-west:after {
+    content:'';
+    display: flex;
+    height: 30px;
+    margin-right: -20px;
+    background: #FFF url(../images/layout/west_bottom.png) repeat-y right top;
+    clear: both;
+}
+.ui-layout-west.empty, .ui-layout-west.empty:after {
+    height: 0;
+    padding: 0;
+}
+
+.ui-layout-west ul.menu
+{
+    line-height: 26px;
+    background: #FFF;
+    border: none;
+    color: #000;
+    position: static;
+    padding: 0;
+    overflow: visible;
+}
+
+.ui-layout-west ul.menu li 
+{
+    padding: 0 1em;
+    position: relative;
+}
+
+.ui-layout-west ul.menu li:hover
+{
+    background: url(../images/layout/nav_hover.png) repeat-x left top;
+}
+
+.ui-layout-west ul.menu li.has-child-menu > a
+{
+    padding-right: 12px;
+    background: url(../images/layout/nav_hasChild2.png) no-repeat right center;
+}
+
+.ui-layout-west ul.menu .sub-menu { display: none; zoom: 1; z-index: 1; }
+.ui-layout-west ul.menu .sub-menu > li { padding: 0 1em; white-space:nowrap; }
+.ui-layout-west ul.menu .sub-menu > li:hover { background: #E8F2FF; }
+
+.ui-layout-west ul.menu ul.sub-menu
+{
+    position: absolute;
+    left: 100%;
+    margin-top: -27px;
+    border: 1px solid #AAA;
+    background: #FFF;
+    -webkit-box-shadow: #CCC 1px 1px 3px;
+    -moz-box-shadow: #CCC 1px 1px 3px;
+    box-shadow: #CCC 1px 1px 3px;
+}
+
+/********************************************************** 左側選單 Style END ***/
+
+/* 特規: 左側選單分隔線 */
+.ui-layout-west ul.menu .line, .ui-layout-north ul.menu .line
+{
+    height: 1px;
+    margin: 6px 0;
+    border-bottom: 1px solid #999;
+}
