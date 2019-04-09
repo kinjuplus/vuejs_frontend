@@ -1,0 +1,3 @@
+const item = {"id":null,"itemNo":null,"name":null,"releaseDate":null,"creator":null,"itemIbas":[{"id":null,"attrValue":"SUV","ibaDef":{"id":1,"attrKey":"car.type","attrDisplay":"Car Type","attrType":"String","defaultValue":"SUV"}},{"id":null,"attrValue":null,"ibaDef":{"id":2,"attrKey":"car.brand","attrDisplay":"Brand","attrType":"String","defaultValue":null}},{"id":null,"attrValue":null,"ibaDef":{"id":3,"attrKey":"car.color","attrDisplay":"Preferred Color","attrType":"String","defaultValue":null}},{"id":null,"attrValue":null,"ibaDef":{"id":4,"attrKey":"car.fluid","attrDisplay":"Fluid_Type","attrType":"String","defaultValue":null}}],"oldFormatReleaseDate":1554773905307,"testDateTime":null};
+
+export { item };

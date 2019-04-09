@@ -157,7 +157,8 @@ export default{
 	},methods:{
 		getBulletinList(){
            HTTP.get('/getBulletinList').then(response=>{
-                this.bulletinList = response.data.bulletinList;
+								this.bulletinList = response.data.bulletinList;
+								console.log(JSON.stringify(this.bulletinList));
 		   }).catch(error=>{
 			   console.log(error);
 		   });

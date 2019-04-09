@@ -86,6 +86,7 @@ export default{
 			  this.progressStart = true;
               HTTP.post("/pdm/doc/querydocument",requestObj).then(response=>{
 					this.documentList = response.data.documentList;
+					console.log(JSON.stringify(this.documentList));
               }).catch(error=>{
                 console.log(error);
               }).then( ()=>{

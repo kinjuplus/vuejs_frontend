@@ -17,7 +17,6 @@ export const loadUserInfo = ({commit, state}) => {
 export const findCustomers = ({commit, state}) => {
     HTTP.get('getQueryCustomers/').then(function (response) {
         let result = response.data;
-        console.log(result);
         if(result.errorCode=='00'){
            commit('setCustomers', result.customerList);				 
          }else{

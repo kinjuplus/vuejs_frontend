@@ -1,0 +1,3 @@
+const barChartData = [{"appName":"Test Chart 1","lables":["2017/01","2017/02","2017/03","2017/04","2017/05","2017/06","2017/07","2017/08"],"datasets":[{"name":"TW","value":[120,130,110,92,142,138,108,152]},{"name":"CN","value":[78,82,99,120,130,125,118,140]}]},{"appName":"Test Chart 2","lables":["January","February","March","April","May","June","December"],"datasets":[{"name":"My First dataset","value":[45,59,30,81,56,55,40]},{"name":"My Second dataset","value":[28,70,40,19,20,27,90]}]}];
+
+export { barChartData };

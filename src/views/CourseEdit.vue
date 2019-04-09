@@ -76,7 +76,8 @@ export default{
         console.log('The course id is: ' + this.$route.params.courseId);
         HTTP.get("/courseview/"+this.$route.params.courseId+"/").then(response=>{
            if(response.data.errorCode=='00'){
-               this.course = response.data.course;
+							 this.course = response.data.course;
+							 console.log(JSON.stringify(this.course));
            }else{
                alert('Error!');
            }
@@ -86,7 +87,7 @@ export default{
     },
     methods:{
         showCourseList(){
-             this.$router.push({name:'courseQuery'}); 
+             this.$router.push({name:'CourseQuery'}); 
         },
         doSubmit(event){
             if(this.$refs.saveForm.checkValidity()){

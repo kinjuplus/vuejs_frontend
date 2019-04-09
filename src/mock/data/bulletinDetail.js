@@ -1,0 +1,2 @@
+const bulletinDetail = {"bulletinId":34,"subject":"測試主題","subjectEn":"Test Subject","top":"Y","invalid":"Y","priority":"1","content":"<p><i><strong>測試主題測試主題測試主題測試主題測試主題測試主題測試主題測試主題測試主題測試主題測試主題測試主題測試主題測試主題</strong></i></p>","creator":"12345678","creatorName":"Sunny","creatorExt":"951951","publishDate":[2018,1,25],"effectiveDate":[2018,2,20],"createDate":[2019,3,14],"updateDate":[2019,3,14]};
+export { bulletinDetail };

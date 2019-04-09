@@ -1,0 +1,3 @@
+const plantTypeList = [{"optionkey":"LCD1","optionvalue":"P-LCD1","optionSort":1,"enable":true},{"optionkey":"J002","optionvalue":"P-J002","optionSort":2,"enable":true},{"optionkey":"J001","optionvalue":"P-J001","optionSort":3,"enable":true},{"optionkey":"J003","optionvalue":"P-J003","optionSort":4,"enable":true},{"optionkey":"J004","optionvalue":"P-J004","optionSort":5,"enable":true}];
+
+export { plantTypeList };

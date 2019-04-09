@@ -1,0 +1,3 @@
+const docTypeList = [{"optionkey":"ITREQUEST-6383_02","optionvalue":"Supplier PPAP overview(NPDP)","optionSort":10,"enable":true},{"optionkey":"ITREQUEST-6382_01","optionvalue":"NUDD Report(ACD)(NPDP)","optionSort":20,"enable":true},{"optionkey":"ITREQUEST-6383_01","optionvalue":"NUDD Report(ACD)(NPDP)","optionSort":30,"enable":true},{"optionkey":"ITREQUEST-6299_18","optionvalue":"Prototype Control plan(SG)(NPDP)","optionSort":40,"enable":true},{"optionkey":"ITREQUEST-6299_04","optionvalue":"DFMEA(TP ACD)(NPDP)","optionSort":50,"enable":true}];
+
+export { docTypeList };

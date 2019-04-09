@@ -82,7 +82,7 @@ export default {
         return{
            editor: ClassicEditor,
            bulletin:{},
-           richText:'<p><em><span style="color:#cc0000"><strong><span style="font-size:36px"><span style="background-color:#1abc9c">測試主題測試主題測試主題測試主題測試主題測試主題測試主題測試主題測試主題測試主題測試主題測試主題測試主題測試主題</span></span></strong></span></em></p>'
+           richText:''
         };
     },created:function(){
        this.getBulletinDetail();
@@ -92,6 +92,7 @@ export default {
              HTTP.get("/bulletinView/"+this.$route.params.bulletinId+"/").then(response=>{
                  if(response.data.errorCode=='00'){
                    this.bulletin = response.data.bulletin;
+                   console.log(JSON.stringify(this.bulletin));
                  }else{
                    alert('Error!');
                  }

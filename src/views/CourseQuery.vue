@@ -53,9 +53,9 @@
        },
        created: function(){
           HTTP.get("findAllCourse/").then(response=>{
-              console.log(response);
               if(response.data.errorCode == '00'){
                  this.rows = response.data.courseList;
+                 console.log(JSON.stringify(this.rows));
               }else{
                   alert('Error!');
               }

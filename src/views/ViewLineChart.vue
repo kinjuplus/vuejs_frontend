@@ -42,7 +42,7 @@ export default{
     mounted(){
       HTTP.get("viewCharts/").then(response=>{
           if(response.data.errorCode=="00"){
-              console.log(response.data.chartData[0]);
+              console.log(response.data.chartData);
               this.chartDataOne = {};
               this.chartDataOne.labels = response.data.chartData[0].lables;
               this.chartDataOne.datasets = [];
@@ -53,8 +53,7 @@ export default{
 		            responsive : true,
 		            maintainAspectRatio : false
 	            };
-              console.log(JSON.stringify(this.chartDataOne));
-
+              
               console.log(response.data.chartData[1]);
               this.chartDataTwo = {};
               this.chartDataTwo.labels = response.data.chartData[1].lables;

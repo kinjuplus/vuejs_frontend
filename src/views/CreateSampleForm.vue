@@ -112,7 +112,8 @@ export default{
         getAllDocType(){
             HTTP.get("getAllDocType/").then(response=>{
               if(response.data.errorCode=="00"){
-                 this.docTypeList = response.data.docTypeList;
+								 this.docTypeList = response.data.docTypeList;
+								 console.log(JSON.stringify(this.docTypeList));
               }else{
                  alert("Error!");
               }
@@ -123,7 +124,8 @@ export default{
         getAllPlant(){
             HTTP.get("getAllPlant/").then(response=>{
               if(response.data.errorCode=="00"){
-                 this.plantList = response.data.plantList;
+								 this.plantList = response.data.plantList;
+								 console.log(JSON.stringify(this.plantList));
               }else{
                  alert("Error!");
               }

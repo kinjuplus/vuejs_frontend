@@ -42,7 +42,7 @@ export default{
     mounted(){
       HTTP.get("viewCharts/").then(response=>{
           if(response.data.errorCode=="00"){
-              console.log(response.data.chartData[0]);
+              console.log(JSON.stringify(response.data.chartData));
               this.chartDataOne = {};
               this.chartDataOne.labels = response.data.chartData[0].lables;
               this.chartDataOne.datasets = [];
@@ -50,12 +50,10 @@ export default{
               this.chartDataOne.datasets.push({label:'CN',backgroundColor: 'rgba(0,0,200,0.5)', data:response.data.chartData[0].datasets[1].value}); 
               this.dataOneLoaded = true;
               this.options= {
-		        responsive : true,
-		        maintainAspectRatio : false
-	          };
-              console.log(JSON.stringify(this.chartDataOne));
-
-              console.log(response.data.chartData[1]);
+		          responsive : true,
+		          maintainAspectRatio : false
+	            };
+             
               this.chartDataTwo = {};
               this.chartDataTwo.labels = response.data.chartData[1].lables;
               this.chartDataTwo.datasets = [];

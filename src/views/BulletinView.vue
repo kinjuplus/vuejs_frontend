@@ -78,7 +78,8 @@ export default {
              console.log('The bulletin id is: ' + this.$route.params.bulletinId);
              HTTP.get("/bulletinView/"+this.$route.params.bulletinId+"/").then(response=>{
                  if(response.data.errorCode=='00'){
-                   this.bulletin = response.data.bulletin;
+				   this.bulletin = response.data.bulletin;
+				   console.log(JSON.stringify(this.bulletin));
                  }else{
                    alert('Error!');
                  }

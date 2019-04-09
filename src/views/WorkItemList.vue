@@ -116,7 +116,7 @@ export default{
         queryWorkItemList(){
             HTTP.get("/queryWorkItemList").then(response=>{
                 this.workItemList = response.data.workItemList;
-                console.log(this.workItemList);
+                console.log(JSON.stringify(this.workItemList));
             }).catch(error=>{
               console.log(error);
             });

@@ -36,16 +36,16 @@
 						</tr>
 					</thead>
 					<tbody>		
-                         <tr v-for="(itemIba, index) in item.itemIbas" :key="itemIba.id">
-                             <td>
-                                <input type="hidden" :name="'itemIbas['+index+'].id'" :value="itemIba.id" :id="'id-'+index"/>
-								<input type="hidden" :name="'itemIbas['+index+'].ibaDef'" :value="itemIba.ibaDef.id" :id="'attrIbaDef-'+index"/>  
-								<input type="text" :name="'itemIbas['+index+'].ibaDef.attrDisplay'" :id="'attrDisp-'+index" readonly="readonly" :value="itemIba.ibaDef.attrDisplay"/>
-                             </td>
-							 <td>
-								<input type="text" :name="'itemIbas['+index+'].attrValue'" required="required" :id="'attrValue-'+index"/> 
-							 </td>       
-						</tr>
+                <tr v-for="(itemIba, index) in item.itemIbas" :key="itemIba.id">
+                   <td>
+                      <input type="hidden" :name="'itemIbas['+index+'].id'" :value="itemIba.id" :id="'id-'+index"/>
+								      <input type="hidden" :name="'itemIbas['+index+'].ibaDef'" :value="itemIba.ibaDef.id" :id="'attrIbaDef-'+index"/>  
+								      <input type="text" :name="'itemIbas['+index+'].ibaDef.attrDisplay'" :id="'attrDisp-'+index" readonly="readonly" :value="itemIba.ibaDef.attrDisplay"/>
+                   </td>
+							     <td>
+								      <input type="text" :name="'itemIbas['+index+'].attrValue'" required="required" :id="'attrValue-'+index"/> 
+							     </td>       
+						    </tr>
 					</tbody>
 				</table>
 				<br />
@@ -73,7 +73,8 @@ export default {
     created:function(){
       HTTP.get("getItemDefinition/").then(response=>{
          if(response.data.errorCode=="00"){
-             this.item = response.data.item;
+						 this.item = response.data.item;
+						 console.log(JSON.stringify(this.item));
 		 }else{
            alert('Error!');
 		 }
@@ -84,8 +85,8 @@ export default {
 		doSubmit:function(event){
 			let requestBody = this.getFormData();
 			HTTP.post("itemsave/",requestBody).then(response=>{
-                if(response.data.errorCode=="00"){
-                    this.$router.push({name:'ItemQuery'}); 
+        if(response.data.errorCode=="00"){
+            this.$router.push({name:'ItemQuery'}); 
 				}else{
 					alert("Error!");
 				}

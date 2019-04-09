@@ -169,7 +169,7 @@ export default{
        getItemList(){
             HTTP.get("getAllItems/").then(response=>{
              this.itemList = response.data.itemList;
-             console.log(this.itemList);
+             console.log(JSON.stringify(this.itemList));
           }).catch(error=>{
              console.log(error);
           });
